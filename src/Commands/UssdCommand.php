@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\Skeleton\Commands;
+namespace Kamaro\Ussd\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class UssdCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'ussd';
 
     public $description = 'My command';
 

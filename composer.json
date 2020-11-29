@@ -1,16 +1,16 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "kamaro/ussd",
+    "description": "USSD (Unstructured Supplementary Service Data) is a Global System for Mobile Communications (GSM) protocol that is used to send text messages. USSD is similar to Short Message Service (SMS). USSD uses codes made up of the characters that are available on a mobile phone.",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "kamaro",
+        "ussd"
     ],
-    "homepage": "https://github.com/:vendor_name/:package_name",
+    "homepage": "https://github.com/kamaro/ussd",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Kamaro",
+            "email": "kamaroly@gmail.com",
             "homepage": "https://spatie.be",
             "role": "Developer"
         }
@@ -26,13 +26,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src",
-            "Spatie\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Kamaro\\Ussd\\": "src",
+            "Kamaro\\Ussd\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Kamaro\\Ussd\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -46,10 +46,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
+                "Kamaro\\Ussd\\UssdServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
+                "Ussd": "Kamaro\\Ussd\\UssdFacade"
             }
         }
     },

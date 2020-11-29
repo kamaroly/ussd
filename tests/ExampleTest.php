@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Tests;
+namespace Kamaro\Ussd\Tests;
 
 class ExampleTest extends TestCase
 {
