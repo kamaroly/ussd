@@ -1,19 +1,26 @@
-# USSD (Unstructured Supplementary Service Data) is a Global System for Mobile Communications (GSM) protocol that is used to send text messages. USSD is similar to Short Message Service (SMS). USSD uses codes made up of the characters that are available on a mobile phone.
+# A Laravel package to work with USSD
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/kamaro/ussd.svg?style=flat-square)](https://packagist.org/packages/kamaro/ussd)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/kamaro/ussd/run-tests?label=tests)](https://github.com/kamaro/ussd/actions?query=workflow%3Arun-tests+branch%3Amaster)
 [![Total Downloads](https://img.shields.io/packagist/dt/kamaro/ussd.svg?style=flat-square)](https://packagist.org/packages/kamaro/ussd)
 
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+USSD (Unstructured Supplementary Service Data) is a Global System for Mobile Communications (GSM) protocol that is used to send text messages. USSD is similar to Short Message Service (SMS) with interractive flow between mobile phone and the back-end. USSD uses codes made up of the characters that are available on a mobile phone.
 
-## Support us
+## Features
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/package-ussd-laravel.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/package-ussd-laravel)
+* Can create unlimited linked flows.
+* Can consume API  flow display.
+* Support multiple languages. 
+* Support user profile. 
+* Can do dynamic USSD.
+* Can do Static USSD.
+* Can do USSD Push.
+* Collect and dump Ussd data to URL.
 
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
+* Can bill per session 
+* Can bill per period 
 
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
 ## Installation
 
