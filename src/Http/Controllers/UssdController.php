@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Kamaro\Ussd\Http\Controllers;
 
@@ -7,8 +7,8 @@ namespace Kamaro\Ussd\Http\Controllers;
  */
 class UssdController
 {
-	public function index()
-	{
-		return view('ussd::index');
-	}
+    public function index()
+    {
+        return view('ussd::index');
+    }
 }
