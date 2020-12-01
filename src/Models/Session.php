@@ -1,12 +1,12 @@
-<?php 
+<?php
 
 namespace Kamaro\Ussd\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Session extends Model{
+class Session extends Model
+{
+    protected $guarded = [];
 
-	protected $guarded = [];
-
-	protected $table = 'ussd_sessions';
+    protected $table = 'ussd_sessions';
 }

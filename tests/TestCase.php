@@ -34,7 +34,7 @@ class TestCase extends Orchestra
             'driver' => 'sqlite',
             'database' => ':memory:',
             'prefix' => '',
-        ]);    
+        ]);
 
         $this->runMigrations();
     }
