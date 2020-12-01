@@ -1,23 +1,23 @@
-<?php 
+<?php
 
 namespace Kamaro\Ussd\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Menu extends Model{
-
-	public  $guarded = [];
+class Menu extends Model
+{
+    public $guarded = [];
 
 	protected  $table = 'ussd_menus';
 
-	/**
-	 * Get parent relation
-	 * @return  self
-	 */
-	public function parent()
-	{
-		return $this->belongsTo(Menu::class, 'parent_id', 'id');
-	}
+    /**
+     * Get parent relation
+     * @return  self
+     */
+    public function parent()
+    {
+        return $this->belongsTo(Menu::class, 'parent_id');
+    }
 
 	/**
 	 * Get Children Relation
