@@ -24,10 +24,4 @@ class SessionTest extends TestCase
 
 	 	$this->assertDatabaseCount('ussd_sessions', 1);
 	}
-
-	// /** @test */
-	public function it_should_accept_session_for_existing_menu_only()
-	{
-	
-	}
 }
