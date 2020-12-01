@@ -10,7 +10,7 @@ class UssdServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-       $this->registerPublishables()
+        $this->registerPublishables()
             ->registerRoutes()
             ->registerMigrations();
 
@@ -25,24 +25,25 @@ class UssdServiceProvider extends ServiceProvider
 
     public function registerPublishables() : self
     {
-            $this->publishes([
+        $this->publishes([
                 __DIR__ . '/../config/ussd.php' => config_path('ussd.php'),
             ], 'config');
 
-            $this->publishes([
+        $this->publishes([
                 __DIR__ . '/../resources/views' => base_path('resources/views/vendor/ussd'),
-            ], 'views');    
+            ], 'views');
 
-            return $this;
+        return $this;
     }
 
     public function registerRoutes()
     {
-        Route::macro('ussd', function(string $routeName){
-            Route::prefix($routeName)->group(function(){
+        Route::macro('ussd', function (string $routeName) {
+            Route::prefix($routeName)->group(function () {
                 Route::view('/', 'ussd::index');
             });
         });
+
         return $this;
     }
 
