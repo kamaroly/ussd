@@ -4,9 +4,11 @@ namespace Kamaro\Ussd\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UssdMenu extends Model{
+class Menu extends Model{
 
 	public  $guarded = [];
+
+	protected  $table = 'ussd_menus';
 
 	/**
 	 * Get parent relation
@@ -14,7 +16,7 @@ class UssdMenu extends Model{
 	 */
 	public function parent()
 	{
-		return $this->belongsTo(UssdMenu::class, 'parent_id', 'id');
+		return $this->belongsTo(Menu::class, 'parent_id', 'id');
 	}
 
 	/**
@@ -23,7 +25,7 @@ class UssdMenu extends Model{
 	 */
 	public function children()
 	{
-		return $this->hasMany(UssdMenu::class, 'parent_id');
+		return $this->hasMany(Menu::class, 'parent_id');
 	}
 
 	/**

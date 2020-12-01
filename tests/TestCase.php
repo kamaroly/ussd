@@ -34,11 +34,16 @@ class TestCase extends Orchestra
             'driver' => 'sqlite',
             'database' => ':memory:',
             'prefix' => '',
-        ]);
+        ]);    
 
-        
-        include_once __DIR__.'/../database/migrations/create_ussd_table.php.stub';
+        $this->runMigrations();
+    }
+
+    public function runMigrations()
+    {
+        include_once __DIR__.'/../database/migrations/create_ussd_menu_table.php.stub';
+        include_once __DIR__.'/../database/migrations/create_ussd_sessions_table.php.stub';
         (new \CreateUssdMenuTable())->up();
-        
+        (new \CreateUssdSessionTable)->up();
     }
 }

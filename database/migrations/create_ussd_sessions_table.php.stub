@@ -1,0 +1,46 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateUssdSessionTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+         Schema::create('ussd_sessions', function(Blueprint $table){
+
+            $table->bigIncrements('id');
+            $table->string('msisdn');
+            $table->string('session');
+            $table->string('input');
+            $table->string('lang');
+            $table->string('slug');
+            $table->text('served_options')->nullable();
+            $table->string('freeflow');
+            $table->integer('parent_id')->nullable()->default(0);
+            $table->integer('menu_id')->default(0);
+
+            $table->integer('user_id')->unsigned()->nullable(); // Person who created this menu
+            $table->integer('team_id')->unsigned()->nullable();
+            
+            $table->timeStamps();
+            $table->softDeletes();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('ussd_sessions');
+    }
+}
