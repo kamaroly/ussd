@@ -3,6 +3,7 @@
 namespace Kamaro\Ussd\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Route;
 use Kamaro\Ussd\UssdServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -15,6 +16,8 @@ class TestCase extends Orchestra
         Factory::guessFactoryNamesUsing(
             fn (string $modelName) => 'Kamaro\\Ussd\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
+        /** Import route namespace for this package */
+        Route::ussd('kamaro');
     }
 
     protected function getPackageProviders($app)
